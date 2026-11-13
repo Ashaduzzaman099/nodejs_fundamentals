@@ -1,4 +1,5 @@
 import { IncomingMessage, ServerResponse } from 'http';
+import productController from '../controllers/product.controllers';
 const routerHandler = (req: IncomingMessage, res: ServerResponse)=>{
     
     const url = req.url
@@ -10,8 +11,7 @@ const routerHandler = (req: IncomingMessage, res: ServerResponse)=>{
         res.end(JSON.stringify({massage: "This is Root Route"}))
 
     }else if(url?.startsWith("/products")){
-        res.writeHead(200, {"content-tpe": "application/json"});
-        res.end(JSON.stringify({massage: "This is /Product Route"}))
+        productController(req, res);
     } else{ 
         res.writeHead(400, {"content-tpe": "application/json"});
         res.end(JSON.stringify({msg: "This Rote is not Found !!"}))
