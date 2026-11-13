@@ -17,3 +17,5 @@ const routerHandler = (req: IncomingMessage, res: ServerResponse)=>{
         res.end(JSON.stringify({msg: "This Rote is not Found !!"}))
     }
 }
+
+export default routerHandler;
