@@ -10,7 +10,10 @@ const server: Server = createServer((req: IncomingMessage, res: ServerResponse)=
         res.writeHead(200, {"content-tpe": "application/json"});
         res.end(JSON.stringify({massage: "This is Root Route"}))
 
-    }else{ 
+    }else if(url?.startsWith("/products")){
+        res.writeHead(200, {"content-tpe": "application/json"});
+        res.end(JSON.stringify({massage: "This is /Product Route"}))
+    } else{ 
         res.writeHead(400, {"content-tpe": "application/json"});
         res.end(JSON.stringify({msg: "This Rote is not Found !!"}))
     }
