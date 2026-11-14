@@ -1,13 +1,1 @@
-[
-  {
-    "id": 1,
-    "name": "product-1",
-    "price": 20
-  },
-
-  {
-    "id": 2,
-    "name": "Mango",
-    "price": 40
-  }
-]
+[{"id":1,"name":"product-1","price":20},{"id":2,"name":"Banana Max","price":4}]
