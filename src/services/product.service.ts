@@ -12,3 +12,4 @@ export const productService = ()=>{
 export const createProduct = (payLoad: Iproduct[])=>{
     fs.writeFileSync(filePath, JSON.stringify(payLoad));
 }
+
